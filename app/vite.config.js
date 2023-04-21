@@ -7,9 +7,9 @@ export default defineConfig({
       input: {
         main: 'index.html',
         entry: 'main.js',
-        itemPics: 'images/items',
-      }
-    }
-    
-  }
+      },
+    },
+    assetsDir: 'images/items',
+    assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg'],
+  },
 })
