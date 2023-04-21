@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         entry: 'main.js',
+        data: '.src/data.js',
       }
     }
     
