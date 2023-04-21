@@ -4,10 +4,65 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Joe's Restaurant</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <!--// Google Fonts //-->
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="font-smythe bg-[#F5F5F5] grid place-content-center">
+    <div class="container bg-white">
+      <!-- NAV BAR -->
+      <nav class="drop-shadow-nav">
+        <div class="relative text-center text-white">
+          <img class="" src="./images/burger.png" alt="nav-pic" />
+          <div class="text-left absolute left-11 top-5">
+            <h1 class="text-[39px]">Joe's Diner</h1>
+            <h2 class="text-[22px]">The best burgers and pizzas in town.</h2>
+          </div>
+        </div>
+      </nav>
+      <!--// NAV BAR //-->
+      <!-- ORDER ITEMS -->
+      <div id="options" class="p-12">
+        <!-- OPTION -->
+        <div class="flex justify-between flex-wrap mt-[67px] pb-[51px]">
+          <!-- Specs -->
+          <div class="flex flex-row">
+            <!-- Pic (emoji) -->
+            <label for="" class="text-[78px]" id="item-pic">⚾</label>
+            <div class="flex flex-col">
+              <h1 class="ml-8 text-[28px]">-/Name/-</h1>
+              <h3 class="ml-8 text-[#8B8B8B] text-base mt-2">
+                -/Ingredients/-
+              </h3>
+              <h4 class="ml-8 text-xl mt-2">-/Price/-</h4>
+            </div>
+          </div>
+          <!--// Specs //-->
+          <!-- Add Btn -->
+          <div class="fle">
+            <button
+              id="add-btn"
+              class="font-inter ring-[1.5px] ring-[#DEDEDE] h-[50px] w-[50px] text-[32px] text-center rounded-full font-extralight"
+            >
+              +
+            </button>
+          </div>
+        </div>
+        <hr />
+        <!--// OPTION //-->
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
