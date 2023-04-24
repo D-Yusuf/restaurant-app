@@ -46,3 +46,16 @@ function getItemsHtml() {
 function render() {
   document.getElementById("options").innerHTML = getItemsHtml();
 }
+
+
+/*
+<!-- TOTAL -->
+          <div class="flex justify-between mt-[14px]">
+            <span class="flex gap-x-3">
+              <h2 class="text-[28px]">Total:</h2>
+            </span>
+            <h3>$21</h3>
+          </div>
+          <!--// TOTAL //-->
+
+*/

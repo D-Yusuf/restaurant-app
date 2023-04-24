@@ -13,6 +13,7 @@ export default {
       fontFamily:{
         'smythe':['Smythe', 'cursive'],
         'inter':['Inter', 'sans-serif'],
+        'open-sans':['Open Sans', 'sans-serif'],
       }
     },
   },
