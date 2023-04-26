@@ -1,10 +1,49 @@
 import { menuArray } from "./src/data.js";
+// let orderedItems = [];
 
 window.onload = () => render();
 
-document.addEventListener("click", (e)=>{
-    console.log(e.target.id)
-})
+document.addEventListener("click", (e) => {
+  if (e.target.dataset.id) {
+    addToOrderList(e.target.dataset.id);
+  }
+  if (e.target.dataset.remove) {
+    removeFromOrderList(e.target.dataset.remove);
+  }
+  // render()
+});
+function addToOrderList(targetId) {
+  const addedItemObj = menuArray.filter((item) => {
+    return item.id == targetId;
+  })[0];
+  document.getElementById("items").innerHTML += `
+  <div data-item-id="${targetId}"" class="item flex justify-between">
+    <span class="flex gap-x-3">
+      <h2 class="text-[28px]">${addedItemObj.name}</h2>
+      <button class="delete-btn text-xs text-[#BBBBBB] font-open-sans" data-remove="${targetId}">remove</button>
+    </span>
+    <h6 data-value="${addedItemObj.price}">$${addedItemObj.price}</h6>
+  </div>
+`;
+
+totalOrderPrice()
+}
+function removeFromOrderList(targetId) {
+  const itemToRemove = document.querySelector(`[data-item-id="${targetId}"]`);
+  const removeBtn = document.querySelector(`[data-remove="${targetId}"]`);
+  // console.log(itemToRemove)
+  if (removeBtn) {
+    itemToRemove.remove();
+  }
+}
+function totalOrderPrice() {
+  const orderedItems = document.querySelectorAll('[data-value]');
+  let totalPrice = 0;
+  orderedItems.forEach((item) => {
+    totalPrice += parseFloat(item.dataset.value);
+  });
+  document.getElementById("total-price").innerText = `$${totalPrice}`
+}
 
 function getItemsHtml() {
   let itemsHtml = "";
@@ -29,7 +68,7 @@ function getItemsHtml() {
                 <!-- Add Btn -->
                 <div class="flex">
                 <button
-                id="add-${item.id}"
+                data-id = "${item.id}"
                 class="font-inter ring-[1.5px] ring-[#DEDEDE] h-[50px] w-[50px] text-[32px] text-center rounded-full font-extralight"
                 >
                 +
@@ -46,7 +85,6 @@ function getItemsHtml() {
 function render() {
   document.getElementById("options").innerHTML = getItemsHtml();
 }
-
 
 /*
 <!-- TOTAL -->

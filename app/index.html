@@ -65,26 +65,31 @@
         <!--// OPTION //-->
       </div>
       <!-- USER ORDER DETAILS -->
-        <div class="mt-[45px] text-center">
+        <div id="user-order-details" class="mt-[45px] text-center">
           <div class=" text-[28px] mb-16">
             <h1>Your order</h1>
           </div>
-          <!-- Item -->
-          <div class="flex justify-between">
-            <span class="flex gap-x-3">
-              <h2 class="text-[28px]">Ball</h2>
-              <button class="text-xs text-[#BBBBBB] font-open-sans" id="remove-btn">remove</button>
-            </span>
-            <h3>$21</h3>
+          <!-- ITEMS -->
+          <div id="items">
+            
+            <!-- Item -->
+            <div class="flex justify-between">
+              <span class="flex gap-x-3">
+                <h2 class="text-[28px]">Ball</h2>
+                <button class="text-xs text-[#BBBBBB] font-open-sans" id="remove-btn">remove</button>
+              </span>
+              <h3>$21</h3>
+            </div>
+            <!--// Item //-->
           </div>
-          <!--// Item //-->
+            <!-- ITEMS -->
           <hr class="mt-8 border-2 border-[#393333]">
           <!-- TOTAL -->
           <div class="flex justify-between mt-[14px]">
             <span class="flex gap-x-3">
               <h2 class="text-[28px]">Total:</h2>
             </span>
-            <h3>$21</h3>
+            <h3 id="total-price">$0</h3>
           </div>
           <!--// TOTAL //-->
         </div>
