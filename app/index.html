@@ -32,73 +32,103 @@
         </div>
       </nav>
       <!--// NAV BAR //-->
-      <!-- ORDER SECTION -->
+      <!-- UNDER NAV SECTION -->
       <div class="p-12">
         <!-- ORDER ITEMS -->
-      <div id="options" class="">
-        <!-- OPTION -->
-        <div class="flex justify-between flex-wrap mt-[67px] pb-[51px]">
-          <!-- Specs -->
-          <div class="flex flex-row">
-            <!-- Pic (emoji) -->
-            <label for="" class="text-[78px]" id="item-pic">⚾</label>
-            <div class="flex flex-col">
-              <h1 class="ml-8 text-[28px]">-/Name/-</h1>
-              <h3 class="ml-8 text-[#8B8B8B] text-base mt-2">
-                -/Ingredients/-
-              </h3>
-              <h4 class="ml-8 text-xl mt-2">-/Price/-</h4>
+        <div id="options" class="">
+          <!-- OPTION -->
+          <div class="flex justify-between flex-wrap mt-[67px] pb-[51px]">
+            <!-- Specs -->
+            <div class="flex flex-row">
+              <!-- Pic (emoji) -->
+              <label for="" class="text-[78px]" id="item-pic">⚾</label>
+              <div class="flex flex-col">
+                <h1 class="ml-8 text-[28px]">-/Name/-</h1>
+                <h3 class="ml-8 text-[#8B8B8B] text-base mt-2">
+                  -/Ingredients/-
+                </h3>
+                <h4 class="ml-8 text-xl mt-2">-/Price/-</h4>
+              </div>
+            </div>
+            <!--// Specs //-->
+            <!-- Add Btn -->
+            <div class="fle">
+              <button
+                id="add-btn"
+                class="font-inter ring-[1.5px] ring-[#DEDEDE] h-[50px] w-[50px] text-[32px] text-center rounded-full font-extralight"
+              >
+                +
+              </button>
             </div>
           </div>
-          <!--// Specs //-->
-          <!-- Add Btn -->
-          <div class="fle">
-            <button
-              id="add-btn"
-              class="font-inter ring-[1.5px] ring-[#DEDEDE] h-[50px] w-[50px] text-[32px] text-center rounded-full font-extralight"
-            >
-              +
-            </button>
-          </div>
+          <hr />
+          <!--// OPTION //-->
         </div>
-        <hr />
-        <!--// OPTION //-->
-      </div>
-      <!-- USER ORDER DETAILS -->
-        <div id="user-order-details" class="mt-[45px] text-center">
-          <div class=" text-[28px] mb-16">
-            <h1>Your order</h1>
-          </div>
-          <!-- ITEMS -->
-          <div id="items">
-            
-            <!-- Item -->
-            <div class="flex justify-between">
-              <span class="flex gap-x-3">
-                <h2 class="text-[28px]">Ball</h2>
-                <button class="text-xs text-[#BBBBBB] font-open-sans" id="remove-btn">remove</button>
-              </span>
-              <h3>$21</h3>
+        <!-- UNDER ITEMS CONTAINER -->
+        <div id="under-items-container" class="visible">
+          <!-- USER ORDER DETAILS -->
+          <div id="user-order-details" class="mt-[45px] text-center">
+            <div class="text-[28px] mb-16">
+              <h1>Your order</h1>
             </div>
-            <!--// Item //-->
-          </div>
             <!-- ITEMS -->
-          <hr class="mt-8 border-2 border-[#393333]">
-          <!-- TOTAL -->
-          <div class="flex justify-between mt-[14px]">
-            <span class="flex gap-x-3">
-              <h2 class="text-[28px]">Total:</h2>
-            </span>
-            <h3 id="total-price">$0</h3>
+            <div id="items">
+              <!-- Item -->
+              <div class="flex justify-between">
+                <span class="flex gap-x-3">
+                  <h2 class="text-[28px]">Ball</h2>
+                  <button
+                    class="text-xs text-[#BBBBBB] font-open-sans"
+                    id="remove-btn"
+                  >
+                    remove
+                  </button>
+                </span>
+                <h3>$21</h3>
+              </div>
+              <!--// Item //-->
+            </div>
+            <!-- ITEMS -->
+            <hr class="mt-[30px] border-2 border-[#393333]" />
+            <!-- TOTAL -->
+            <div class="flex justify-between mt-[14px]">
+              <span class="flex gap-x-3">
+                <h2 class="text-[28px]">Total price:</h2>
+              </span>
+              <h3 id="total-price">$0</h3>
+            </div>
+            <!--// TOTAL //-->
           </div>
-          <!--// TOTAL //-->
-        </div>
-      <!--// USER ORDER DETAILS //-->
-      </div>
-      <!--// ORDER SECTION //-->
+          <!--// USER ORDER DETAILS //-->
+          <!-- COMPLETE ORDER -->
+          <div class="mt-[53px]">
+            <!-- complete btn -->
+            <button
+              id="complete-order-btn"
+              class="bg-[#16DB99] rounded-[3px] text-white w-full h-[60px] font-open-sans font-bold"
+            >
+              Complete Order  
+            </button>
+            <form class="font-open-sans absolute top-1/2 ">
+              <div class="bg-white drop-shadow-form text-center px-[23px] rounded-[4px]">
+                <h1>Your Details</h1>
+                <div class="flex flex-col gap-y-[23px]">
+                  <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="text" placeholder="Name">
+                  <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="number" placeholder="Card number">
+                  <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="number" placeholder="CVV">
 
+                </div>
+
+              </div>
+            </form>
+          </div>
+          <!--// COMPLETE ORDER //-->
+        </div>
+        <!--// UNDER ITEMS CONTAINER //-->
+      </div>
+      <!--// UNDER NAV SECTION //-->
     </div>
     <!--// CONTAINER //-->
     <script type="module" src="/main.js"></script>
   </body>
-  </html>
+</html>
