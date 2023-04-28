@@ -19,8 +19,8 @@
     />
     <!--// Google Fonts //-->
   </head>
-  <body class="font-smythe bg-[#F5F5F5] grid place-content-center">
-    <div class="container bg-white">
+  <body class="font-smythe bg-[#F5F5F5] grid place-content-center px-10">
+    <div class="container bg-white relative">
       <!-- NAV BAR -->
       <nav class="drop-shadow-nav">
         <div class="relative text-center text-white">
@@ -109,26 +109,30 @@
             >
               Complete Order  
             </button>
-            <form class="font-open-sans absolute top-1/2 ">
-              <div class="bg-white drop-shadow-form text-center px-[23px] rounded-[4px]">
-                <h1>Your Details</h1>
-                <div class="flex flex-col gap-y-[23px]">
-                  <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="text" placeholder="Name">
-                  <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="number" placeholder="Card number">
-                  <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="number" placeholder="CVV">
-
-                </div>
-
-              </div>
-            </form>
           </div>
           <!--// COMPLETE ORDER //-->
         </div>
         <!--// UNDER ITEMS CONTAINER //-->
       </div>
       <!--// UNDER NAV SECTION //-->
+      
+      <!-- FORM -->
+        <form class="hidden font-open-sans z-10 fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+          <div class="bg-white drop-shadow-form text-center px-[23px] rounded-[4px]">
+            <h1>Your Details</h1>
+            <div class="flex flex-col gap-y-[23px]">
+              <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="text" placeholder="Name">
+              <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="number" placeholder="Card number">
+              <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="number" placeholder="CVV">
+              
+            </div>
+            
+          </div>
+        </form>
+        <!--// FORM //-->
     </div>
     <!--// CONTAINER //-->
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
