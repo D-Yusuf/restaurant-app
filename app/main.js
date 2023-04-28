@@ -35,6 +35,7 @@ function removeFromOrderList(targetId) {
   if (removeBtn) {
     itemToRemove.remove();
   }
+  totalOrderPrice()
 }
 function totalOrderPrice() {
   const orderedItems = document.querySelectorAll('[data-value]');
