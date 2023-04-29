@@ -2,7 +2,6 @@ import { menuArray } from "./src/data.js";
 // let orderedItems = [];
 
 window.onload = () => render();
-
 document.addEventListener("click", (e) => {
   if (e.target.dataset.id) {
     addToOrderList(e.target.dataset.id);
@@ -87,14 +86,30 @@ function render() {
   document.getElementById("options").innerHTML = getItemsHtml();
 }
 
-/*
-<!-- TOTAL -->
-          <div class="flex justify-between mt-[14px]">
-            <span class="flex gap-x-3">
-              <h2 class="text-[28px]">Total:</h2>
-            </span>
-            <h3>$21</h3>
-          </div>
-          <!--// TOTAL //-->
+/* Order */
+const orderForm = document.getElementById('order-form');
+let name = ''
+let cardNumber = ''
+let cvv = ''
+const completedOrderBtn = document.getElementById('complete-order-btn')
+completedOrderBtn.addEventListener('click', ()=>{orderForm.classList.remove("hidden")})
 
-*/
+orderForm.addEventListener('submit', (e)=>{
+  e.preventDefault()
+  name = orderForm.elements["user-name"].value;
+  cardNumber = orderForm.elements["card-number"].value;
+  cvv = orderForm.elements["cvv"].value;
+  orderForm.classList.add('hidden')
+  completedOrder()
+})
+function completedOrder(){
+  console.log(`Thanks,${name}! Your order is on its way!`);
+  const completedOrderHtml = `
+  <!-- THANK YOU FOR ORDERING -->
+  <div id="order-submitted-text" class="bg-[#ECFDF5] text-[32px] text-[#065F46] py-[51px] px-[63px] text-center mt-[45px] mb-16">
+    <h1>Thanks, ${name}! Your order is on its way!</h1>
+  </div>
+<!--// THANK YOU FOR ORDERING //-->
+  `
+  document.getElementById('under-items-container').innerHTML = completedOrderHtml
+}

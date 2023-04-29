@@ -18,6 +18,8 @@
       rel="stylesheet"
     />
     <!--// Google Fonts //-->
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   </head>
   <body class="font-smythe bg-[#F5F5F5] grid place-content-center px-10">
     <div class="container bg-white relative">
@@ -68,7 +70,7 @@
         <div id="under-items-container" class="visible">
           <!-- USER ORDER DETAILS -->
           <div id="user-order-details" class="mt-[45px] text-center">
-            <div class="text-[28px] mb-16">
+            <div id="order-details-header" class="text-[28px] mb-16">
               <h1>Your order</h1>
             </div>
             <!-- ITEMS -->
@@ -98,38 +100,75 @@
               <h3 id="total-price">$0</h3>
             </div>
             <!--// TOTAL //-->
+            <!-- COMPLETE ORDER -->
+            <div class="mt-[53px]">
+              <!-- complete btn -->
+              <button
+                id="complete-order-btn"
+                class="bg-[#16DB99] rounded-[3px] text-white w-full h-[60px] font-open-sans font-bold"
+              >
+                Complete Order
+              </button>
+            </div>
+            <!--// COMPLETE ORDER //-->
           </div>
           <!--// USER ORDER DETAILS //-->
-          <!-- COMPLETE ORDER -->
-          <div class="mt-[53px]">
-            <!-- complete btn -->
-            <button
-              id="complete-order-btn"
-              class="bg-[#16DB99] rounded-[3px] text-white w-full h-[60px] font-open-sans font-bold"
-            >
-              Complete Order  
-            </button>
-          </div>
-          <!--// COMPLETE ORDER //-->
         </div>
         <!--// UNDER ITEMS CONTAINER //-->
       </div>
       <!--// UNDER NAV SECTION //-->
-      
+
       <!-- FORM -->
-        <form class="hidden font-open-sans z-10 fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-          <div class="bg-white drop-shadow-form text-center px-[23px] rounded-[4px]">
-            <h1>Your Details</h1>
-            <div class="flex flex-col gap-y-[23px]">
-              <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="text" placeholder="Name">
-              <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="number" placeholder="Card number">
-              <input class="ring-1 ring-[#757575] px-[23px] text-[20px] h-[70px] rounded-[4px]" type="number" placeholder="CVV">
-              
-            </div>
-            
+      <form
+        id="order-form"
+        class="hidden font-open-sans z-10 fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"
+      >
+        <div class="bg-white drop-shadow-form px-[23px] rounded-[4px]">
+          <div class="px-[110px] py-[46px]">
+            <h1 class="text-[24px] font-bold">Enter card details</h1>
           </div>
-        </form>
-        <!--// FORM //-->
+          <!-- Inputs -->
+          <div class="flex flex-col gap-y-[23px]">
+            <input
+              class="ring-1 ring-[#757575] px-[26.5px] pt-[16.5px] pb-[14px] text-[20px] h-[70px] rounded-[4px]"
+              name="user-name"
+              type="text"
+              placeholder="Name"
+              required
+              maxlength="30"
+            />
+            <input
+              class="ring-1 ring-[#757575] px-[26.5px] pt-[16.5px] pb-[14px] text-[20px] h-[70px] rounded-[4px]"
+              name="card-number"
+              type="text"
+              placeholder="Card number"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              required
+              maxlength="19"
+            />
+            <input
+              class="ring-1 ring-[#757575] px-[26.5px] pt-[16.5px] pb-[14px] text-[20px] h-[70px] rounded-[4px]"
+              name="cvv"
+              type="text"
+              placeholder="CVV"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              required
+              maxlength="4"
+            />
+          </div>
+          <!-- submit -->
+          <button
+            type="submit"
+            id="submit-details"
+            class="px-[210px] mt-[46px] text-[20px] text-center bg-[#16DB99] pt-[17px] pb-[14px] rounded-[4px] mb-[44px] text-white font-bold"
+          >
+            Pay
+          </button>
+        </div>
+      </form>
+      <!--// FORM //-->
     </div>
     <!--// CONTAINER //-->
 
